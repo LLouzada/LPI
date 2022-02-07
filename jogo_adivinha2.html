@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function sorteia(max){
+
+        var num = Math.floor(Math.random() * max);;
+        return num;
+    }
+
+    var numeroPensado = sorteia(prompt("De 0 a quanto devemos sortear?"))
+    console.log(numeroPensado);
+    
+    var chute = parseInt(prompt("Já pensei. Qual você acha que é? Você terá 3 chances!!"));
+    var tentativa = 1;
+
+    while(tentativa < 3){
+
+        if(chute == numeroPensado) {
+
+            alert("Uau! Você acertou, pois eu pensei no " + numeroPensado);
+            break;
+        } else {
+            tentativa++;
+            alert("Você errou! Tente Novamente! Você esta na " + tentativa + "ª tentativa(s)!");
+            chute = parseInt(prompt("Qual você acha que é?"));
+        }
+    }
+
+    if(tentativa == 3){
+        alert("Que pena, você não descobriu! Eu tinha pensdado no número " + numeroPensado);
+    }
+</script>

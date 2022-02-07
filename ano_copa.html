@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br><br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    mostra("<h1>Quanta copas já tiveram??</h1>");
+    alert("Vamos descobrir quantas copas já tiveram??");
+    var anoCopa = Math.round(parseInt(prompt("Desde que ano?")));
+    var anoAtual = Math.round(prompt("Em que ano estamos?"));
+    var cont = 0;
+    var anoInicial = anoCopa;
+
+    while(anoCopa <= anoAtual){
+        mostra("Teve copa em " + anoCopa);
+        anoCopa = anoCopa + 4;
+        cont = cont + 1;
+    }
+    
+    mostra("<h2>Tiveram " + cont + " copas desde " + anoInicial + "</h2>");
+</script>

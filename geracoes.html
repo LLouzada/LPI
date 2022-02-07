@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+
+<h1>Quantas gerações o Brasil possuí?</h1>
+<script> 
+
+function pulaLinha(){
+
+document.write("<br>");
+}
+
+function mostra(ger){
+
+pulaLinha();
+document.write("Passaram-se " + Math.round(ger) + " gerações desde 1500");   
+pulaLinha();
+}
+
+var ano = 2022;
+var mediaFilhos = 28;
+var geracoes = (ano - 1500)/mediaFilhos;
+
+mostra(geracoes);
+
+</script>

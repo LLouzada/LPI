@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+<h1>Conversor - Celsius em Farenheit</h1>
+<input/>
+<button>Insira a temperatura em graus Celsius</button>
+<script>
+
+    var input = document.querySelector("input");
+    input.focus();
+
+
+    function converte(){
+
+        var grausC = parseFloat(input.value);
+        
+        // verifica se o valor inserido é numerico
+        if(isNaN(grausC)){
+            
+            alert("Valor inválido! Tente novamente!");
+            input.value = "";
+            input.focus();
+        } else{
+            
+            var grausF = (grausC * (9 / 5)) + 32;
+            alert(grausC + "º Celsius são " + grausF + "º Farenheit!");
+            input.value = "";
+            input.focus();
+        }        
+    }
+
+    var button = document.querySelector("button");
+    button.onclick = converte;
+    
+</script>

@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br><br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    mostra("<h1>Quantos números pares tem???</h1>");
+    alert("Vamos descobrir quantos números pares uma sequência possui??");
+
+    var lim = parseInt(prompt("A sequência vai de 1 a quanto??"));
+    var cont = 0;
+    var pares = 2;
+
+    mostra("Quantos números pares existem entre 1 e " + lim + "?");
+
+    while(pares <= lim && lim >=2){
+
+        mostra(pares + " é par!");
+        pares = pares + 2;
+        cont = cont + 1;
+    }
+
+    mostra("De 1 até " + lim + " existem " + cont + " números pares");
+    mostra("FIM!");
+    
+
+</script>

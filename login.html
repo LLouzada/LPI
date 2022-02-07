@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<script>
+
+    var loginCadastrado = "lucas";
+    var senhaCadastrada = "lucas321";
+
+    
+    var tentativaAtual = 1;
+    var max = 3;
+    var cont = 3;
+
+
+    
+
+    while(tentativaAtual <= 3){
+
+        var loginInformado = prompt("Informe seu login");
+        var senhaInformada = prompt("Informe sua senha");
+
+        if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
+
+            alert("Bem-vindo ao sistema " + loginInformado);
+            tentativaAtual = 3;
+        } else {
+
+            cont --;
+            alert("Login inválido. Tente novamente. Você possui mais " + cont + " tentativas, cuidado!");
+        }
+        tentativaAtual ++;
+    }
+</script>
